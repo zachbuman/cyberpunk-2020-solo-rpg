@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0 0% 4%);
+  --foreground: hsl(180 100% 94%);
+  --card: hsl(0 0% 7%);
+  --card-foreground: hsl(180 100% 90%);
+  --popover: hsl(0 0% 7%);
+  --popover-foreground: hsl(180 100% 90%);
+  --primary: hsl(180 100% 50%);
+  --primary-foreground: hsl(0 0% 0%);
+  --secondary: hsl(315 100% 50%);
+  --secondary-foreground: hsl(0 0% 0%);
+  --muted: hsl(0 0% 11%);
+  --muted-foreground: hsl(180 50% 70%);
+  --accent: hsl(120 100% 50%);
+  --accent-foreground: hsl(0 0% 0%);
+  --destructive: hsl(0 100% 50%);
+  --destructive-foreground: hsl(0 0% 100%);
+  --border: hsl(180 100% 20%);
+  --input: hsl(0 0% 11%);
+  --ring: hsl(180 100% 50%);
+  --chart-1: hsl(180 100% 50%);
+  --chart-2: hsl(315 100% 50%);
+  --chart-3: hsl(120 100% 50%);
+  --chart-4: hsl(0 100% 50%);
+  --chart-5: hsl(60 100% 50%);
+  --sidebar: hsl(0 0% 7%);
+  --sidebar-foreground: hsl(180 100% 90%);
+  --sidebar-primary: hsl(180 100% 50%);
+  --sidebar-primary-foreground: hsl(0 0% 0%);
+  --sidebar-accent: hsl(0 0% 11%);
+  --sidebar-accent-foreground: hsl(180 100% 50%);
+  --sidebar-border: hsl(180 100% 20%);
+  --sidebar-ring: hsl(180 100% 50%);
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-serif: Georgia, serif;
+  --font-mono: 'JetBrains Mono', Consolas, monospace;
+  --radius: 0.5rem;
+  --shadow-2xs: 0px 2px 0px 0px hsl(180 100% 50% / 0.00);
+  --shadow-xs: 0px 2px 0px 0px hsl(180 100% 50% / 0.00);
+  --shadow-sm: 0px 2px 0px 0px hsl(180 100% 50% / 0.00), 0px 1px 2px -1px hsl(180 100% 50% / 0.00);
+  --shadow: 0px 2px 0px 0px hsl(180 100% 50% / 0.00), 0px 1px 2px -1px hsl(180 100% 50% / 0.00);
+  --shadow-md: 0px 2px 0px 0px hsl(180 100% 50% / 0.00), 0px 2px 4px -1px hsl(180 100% 50% / 0.00);
+  --shadow-lg: 0px 2px 0px 0px hsl(180 100% 50% / 0.00), 0px 4px 6px -1px hsl(180 100% 50% / 0.00);
+  --shadow-xl: 0px 2px 0px 0px hsl(180 100% 50% / 0.00), 0px 8px 10px -1px hsl(180 100% 50% / 0.00);
+  --shadow-2xl: 0px 2px 0px 0px hsl(180 100% 50% / 0.00);
+  --tracking-normal: 0em;
+  --spacing: 0.25rem;
+}
+
+.dark {
+  --background: hsl(0 0% 4%);
+  --foreground: hsl(180 100% 94%);
+  --card: hsl(0 0% 7%);
+  --card-foreground: hsl(180 100% 90%);
+  --popover: hsl(0 0% 7%);
+  --popover-foreground: hsl(180 100% 90%);
+  --primary: hsl(180 100% 50%);
+  --primary-foreground: hsl(0 0% 0%);
+  --secondary: hsl(315 100% 50%);
+  --secondary-foreground: hsl(0 0% 0%);
+  --muted: hsl(0 0% 11%);
+  --muted-foreground: hsl(180 50% 70%);
+  --accent: hsl(120 100% 50%);
+  --accent-foreground: hsl(0 0% 0%);
+  --destructive: hsl(0 100% 50%);
+  --destructive-foreground: hsl(0 0% 100%);
+  --border: hsl(180 100% 20%);
+  --input: hsl(0 0% 11%);
+  --ring: hsl(180 100% 50%);
+  --sidebar: hsl(0 0% 7%);
+  --sidebar-foreground: hsl(180 100% 90%);
+  --sidebar-primary: hsl(180 100% 50%);
+  --sidebar-primary-foreground: hsl(0 0% 0%);
+  --sidebar-accent: hsl(0 0% 11%);
+  --sidebar-accent-foreground: hsl(180 100% 50%);
+  --sidebar-border: hsl(180 100% 20%);
+  --sidebar-ring: hsl(180 100% 50%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+    background: linear-gradient(135deg, hsl(0 0% 4%) 0%, hsl(240 100% 2%) 100%);
+    min-height: 100vh;
+  }
+}
+
+@layer components {
+  .neon-border {
+    border: 1px solid hsl(180 100% 50%);
+    box-shadow: 0 0 10px hsl(180 100% 50% / 30%), inset 0 0 10px hsl(180 100% 50% / 10%);
+  }
+
+  .neon-glow {
+    text-shadow: 0 0 10px currentColor;
+  }
+
+  .cyber-panel {
+    background: linear-gradient(135deg, hsl(0 0% 7%) 0%, hsl(240 100% 3%) 100%);
+    border: 1px solid hsl(180 100% 20%);
+    backdrop-filter: blur(10px);
+  }
+
+  .scan-lines::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      hsl(180 100% 50% / 3%) 2px,
+      hsl(180 100% 50% / 3%) 4px
+    );
+    pointer-events: none;
+  }
+
+  .glitch-effect {
+    position: relative;
+  }
+
+  .glitch-effect::before,
+  .glitch-effect::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .glitch-effect::before {
+    animation: glitch-1 0.6s infinite;
+    color: hsl(315 100% 50%);
+    z-index: -1;
+  }
+
+  .glitch-effect::after {
+    animation: glitch-2 0.6s infinite;
+    color: hsl(120 100% 50%);
+    z-index: -2;
+  }
+
+  .cyber-button {
+    background: linear-gradient(45deg, hsl(0 0% 11%) 0%, hsl(180 100% 8%) 100%);
+    border: 1px solid hsl(180 100% 50%);
+    color: hsl(180 100% 50%);
+    transition: all 0.3s ease;
+  }
+
+  .cyber-button:hover {
+    background: linear-gradient(45deg, hsl(180 100% 8%) 0%, hsl(180 100% 15%) 100%);
+    box-shadow: 0 0 15px hsl(180 100% 50% / 50%);
+    transform: translateY(-2px);
+  }
+
+  .terminal-text {
+    font-family: 'JetBrains Mono', monospace;
+    color: hsl(120 100% 70%);
+  }
+
+  .character-portrait {
+    background: radial-gradient(circle at center, hsl(180 100% 10%) 0%, hsl(0 0% 5%) 100%);
+    border: 2px solid hsl(315 100% 50%);
+  }
+
+  .stat-bar {
+    background: linear-gradient(90deg, hsl(0 0% 15%) 0%, hsl(0 0% 10%) 100%);
+    border: 1px solid hsl(180 100% 20%);
+  }
+
+  .stat-fill {
+    background: linear-gradient(90deg, hsl(120 100% 50%) 0%, hsl(180 100% 50%) 100%);
+  }
+
+  .dice-container {
+    perspective: 1000px;
+  }
+
+  .dice-face {
+    background: linear-gradient(135deg, hsl(0 0% 15%) 0%, hsl(0 0% 8%) 100%);
+    border: 2px solid hsl(180 100% 50%);
+  }
+}
+
+@layer utilities {
+  .animate-pulse-neon {
+    animation: pulse-neon 2s ease-in-out infinite alternate;
+  }
+
+  .animate-glitch {
+    animation: glitch 0.3s ease-in-out infinite alternate;
+  }
+
+  .animate-scan-line {
+    animation: scan-line 2s linear infinite;
+  }
+}
+
+@keyframes glitch-1 {
+  0%, 14%, 15%, 49%, 50%, 99%, 100% { transform: translate(0); }
+  15%, 49% { transform: translate(-2px, 0); }
+}
+
+@keyframes glitch-2 {
+  0%, 20%, 21%, 62%, 63%, 99%, 100% { transform: translate(0); }
+  21%, 62% { transform: translate(2px, 0); }
+}
+
+@keyframes pulse-neon {
+  from { box-shadow: 0 0 10px hsl(180 100% 50% / 30%); }
+  to { box-shadow: 0 0 20px hsl(180 100% 50% / 60%), 0 0 30px hsl(180 100% 50% / 40%); }
+}
